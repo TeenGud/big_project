@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import './styles/index.scss';
 import { Link } from 'react-router-dom';
-import { Suspense, useContext, useState } from 'react';
+import { Suspense, useContext, useEffect, useState } from 'react';
 import {
     Theme,
     ThemeContext,
@@ -14,6 +14,7 @@ import { AppRouter } from './providers/router';
 import { Navbar } from 'widgets/Navbar';
 import { Sidebar } from 'widgets/Sidebar';
 import { useTranslation } from 'react-i18next';
+import { error } from 'console';
 
 const App = () => {
     const { theme } = useTheme();
