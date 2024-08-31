@@ -2,6 +2,7 @@ import globals from "globals";
 import pluginJs from "@eslint/js";
 import tseslint from "typescript-eslint";
 import pluginReact from "eslint-plugin-react";
+import i18n from "shared/config/i18n/i18n";
 
 
 export default [
@@ -15,5 +16,10 @@ export default [
     '@typescript-eslint/no-unused-vars': "off",
     "react/react-in-jsx-scope": "off",
   },
-  }
+  },
+  {
+    plugins: {
+      "i18next": i18n.plugin,
+    },
+  },
 ];
